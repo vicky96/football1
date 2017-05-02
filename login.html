@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title></title>
+	<link rel="stylesheet" href="assets/css/common.css">
+	<link rel="stylesheet" href="assets/css/login.css">
+	<script>
+		(function (doc, win) {
+			var docEl = doc.documentElement,
+
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;     
+				docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+			};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+
+		})(document, window);
+
+	</script>
+</head>
+<body>
+	<header>
+		<p>足球圈 — 登录</p>
+	</header>
+	<section>
+		<input id="tel" type="text" placeholder="手机号">
+		<span class="sp sp1"></span>
+		<input id="pwd" type="text" placeholder="密码">
+		<span class="sp sp2"></span>
+		<p class="register">还没有账号？点击此处立即 <a>注册</a></p>
+		<button id="submit" type="button">登录</button>
+	</section>
+	<!-- 引入sea.js -->
+	<script src="assets/js/seajs/sea-debug.js"></script>
+	<script>
+		// 配置seajs
+		seajs.config({
+			base:"modules/",//改变sea加载模块的路径，默认是相对于sea.js所在的父目录
+			alias:{//创建别名
+				"zepto":"lib/zepto.min.js",
+				// "zepto":"zepto/zepto.min.js",
+				"tap":"lib/zepto.tap.js"
+			},
+			path:{//配置完整路径，注意在alias里面路径也要改变
+				// "zepto":"http://apps.bdimg.com/libs/"
+			}
+		})
+		// 页面中加载模块，第一个参数是模块的路径，可在上面base中改变
+		seajs.use("login",function(res){
+			// 第二个参数是回调函数，可以不用写
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title></title>
+	<link rel="stylesheet" href="assets/js/modules/lib/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="assets/css/common.css">
+	<link rel="stylesheet" href="assets/css/index.css">
+	<script>
+		(function (doc, win) {
+			var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;     
+				docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+			};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+
+	</script>
+</head>
+<body>
+	<header>
+		<div class="head head-left active">
+			<p>热点</p>
+		</div><div class="head head-right">
+					<p>关注</p>
+				</div>
+	</header>
+	<nav>
+		<ul class="nav-ul swiper-pagination">
+			<!-- <li class="active">足球现场</li>
+			<li>足球生活</li>
+			<li>足球美女</li> -->
+		</ul>
+	</nav>
+	<section class="onesec swiper-container">
+		<div id="hot" class="swiper-wrapper">
+			<div class="page1 swiper-slide">
+				<div id="is0" class="iscroll-wrap">
+					<div class="d0">
+						<div id="page0">
+							<!-- <div class="item">
+								<div class="images">
+									<img src="assets/img/i1.png" alt="">
+								</div>
+								<p class="font">小丸子啊小丸子！</p>
+							</div> -->
+						</div>
+						<div id="upTag_0" style="height:0px;width:100%;background-color: #f3f3f3;text-align: center; line-height: 40px;">上拉</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="page2 swiper-slide">
+				<div id="is1" class="iscroll-wrap">
+					<div class="d1">
+						<div id="page1">
+							<!-- <div class="item it">
+								<div class="images im">
+									<img src="assets/img/i2.png" alt="">
+								</div>
+								<p class="font fo">徐云龙争顶</p>
+							</div> -->
+						</div>
+						<div id="upTag_1" style="height:0px;width:100%;background-color: #f3f3f3;text-align: center; line-height: 40px;">上拉</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="page3 swiper-slide">
+				<div id="is2" class="iscroll-wrap">
+					<div class="d2">
+						<div id="page2">
+							
+						</div>
+						<div id="upTag_2" style="height:0px;width:100%;background-color: #f3f3f3;text-align: center; line-height: 40px;">上拉</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="is3" class="twosec iscroll-wrap-two">
+		<div class="d3">
+			<div id="page3">
+				<!-- <div class="content">
+					<div class="title">
+						<div class="portrait">
+							<img src="assets/img/c1.png" alt="">
+						</div>
+						<p class="name">我叫小萌</p>
+						<p class="describe">我是小萌我怕谁！哈哈哈哈！</p>
+						<div class="agree">
+							<span>382344</span>
+							<span class="iconfont icon-down"></span>
+						</div>
+					</div>
+					<div class="photo">
+						<img src="assets/img/c2.png" alt="">
+					</div>
+					<p class="p1">小丸子啊小丸子！</p>
+				</div> -->
+			</div>
+			<div id="upTag_3" style="height:0px;width:100%;background-color: #f3f3f3;text-align: center; line-height: 40px;">上拉</div>
+		</div>
+	</section>
+	<footer>
+		<ul class="foot-ul">
+			<li id="footindex" class="active">
+				<span class="icon1 iconfont icon-shouye-shouye"></span>
+				<span>首页</span>
+			</li>
+			<li id="discover">
+				<span class="icon2 iconfont icon-fangdajing"></span>
+				<span>发现</span>
+			</li>
+			<li> 
+				<div class="camera">
+					<span class="icon3 iconfont icon-zhaoxiangji"></span>
+				</div>
+				
+			</li>
+			<li id="mine">
+				<span class="icon4 iconfont icon-wode"></span>
+				<span>我的</span>
+			</li>
+			<li id="exit">
+				<span class="icon5 iconfont icon-tuichu"></span>
+				<span>退出</span>
+			</li>
+		</ul>
+	</footer>
+
+	<script src="assets/js/seajs/sea-debug.js"></script>
+	<script>
+		seajs.config({
+			base:"modules/",
+			alias:{
+				"artTamplate":"lib/artTamplate.js",
+				"zepto":"lib/zepto.min.js",
+				"tap":"lib/zepto.tap.js",
+				"swiper":"lib/swiper-3.3.1.min.js",
+				"iscroll":"lib/iscroll-probe.js"
+				
+			}
+		})
+		seajs.use("index")
+	</script>
+	<script id="list0" type="text/html">
+		{{each list0 as value index}}
+			<div class="item item1">
+				<div class="images">
+					<img src="{{value.img}}" alt="">
+				</div>
+				<p class="font">{{value.font}}</p>
+			</div>
+		{{/each}}
+	</script>
+	<script id="list1" type="text/html">
+		{{each list1 as value index}}
+			 <div class="item it">
+				<div class="images im">
+					<img src="{{value.img}}" alt="">
+				</div>
+				<p class="font fo">{{value.title}}</p>
+			</div>
+		{{/each}}
+	</script>
+	<script id="list2" type="text/html">
+		{{each list2 as value index}}
+			<div class="item">
+				<div class="images">
+					<img src="{{value.img}}" alt="">
+				</div>
+				<p class="font">{{value.font}}</p>
+			</div>
+		{{/each}}
+	</script>
+	<script id="list3" type="text/html">
+		{{each list3 as value index}}
+			<div class="content">
+				<div class="title">
+					<div class="portrait">
+						<img src="{{value.por}}" alt="">
+					</div>
+					<p class="name">{{value.name}}</p>
+					<p class="describe">{{value.des}}</p>
+					<div class="agree">
+						<span>{{value.num}}</span>
+						<span class="iconfont icon-down"></span>
+					</div>
+				</div>
+				<div class="photo">
+					<img src="{{value.img}}" alt="">
+				</div>
+				<p class="p1">{{value.p}}</p>
+			</div>
+		{{/each}}
+	</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title></title>
+	<link rel="stylesheet" href="assets/css/common.css">
+	<link rel="stylesheet" href="assets/css/register.css">
+	<script>
+		(function (doc, win) {
+			var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;     
+				docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+			};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body>
+	<header>
+		<p>足球圈 — 注册</p>
+	</header>
+	<section>
+		<input id="tel" type="text" placeholder="手机号">
+		<span class="sp sp1"></span>
+		<input id="pwd" type="text" placeholder="密码">
+		<span class="sp sp2"></span>
+		<input id="username" type="text" placeholder="昵称">
+		<span class="sp sp3"></span>
+		<button id="submit" type="button">提交</button>
+	</section>
+
+	<script src="assets/js/seajs/sea-debug.js"></script>
+	<script>
+		seajs.config({
+			base:"modules/",
+			alias:{
+				"zepto":"lib/zepto.min.js",
+				"tap":"lib/zepto.tap.js"
+			}
+		})
+		seajs.use("register",function(res){
+
+		})
+	</script>
+</body>
+</html>

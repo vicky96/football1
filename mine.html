@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title></title>
+	<link rel="stylesheet" href="assets/js/modules/lib/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="assets/css/common.css">
+	<link rel="stylesheet" href="assets/css/mine.css">
+	<script>
+		(function (doc, win) {
+			var docEl = doc.documentElement,
+
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;     
+				docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+			};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+
+		})(document, window);
+
+	</script>
+</head>
+<body>
+	<header>
+		<p>个人中心</p>
+	</header>
+	<section>
+		<dic class="content">
+			<div class="title">
+				<div class="portrait">
+					<img src="assets/img/c1.png" alt="">
+				</div>
+				<p class="name">我叫小萌</p>
+				<p class="describe">我是小萌我怕谁！哈哈哈哈！</p>
+			</div>
+			<ul class="select swiper-pagination">
+				<!-- <li class="active">照片(<span>1</span>)</li>
+				<li>关注(<span>3</span>)</li>
+				<li>粉丝(<span>5</span>)</li> -->
+			</ul>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="container0 swiper-slide">
+						<div id="is0" class="iscroll-wrap">
+							<div class="d0">
+								<div class="photoes">
+									<!-- <img src="assets/img/m1.png" alt=""> -->
+								</div>
+								<div id="upTag" style="height:0px;width:100%;background-color: #f3f3f3;text-align: center; line-height: 40px;">上拉</div>
+							</div>
+						</div>
+					</div>
+					<div class="container1 swiper-slide">
+						1
+					</div>
+					<div class="container2 swiper-slide">
+						2
+					</div>
+				</div>
+			</div>
+			
+		</dic> 
+	</section>
+	<footer>
+		<ul class="foot-ul">
+			<li id="footindex">
+				<span class="icon1 iconfont icon-shouye-shouye"></span>
+				<span>首页</span>
+			</li>
+			<li id="discover">
+				<span class="icon2 iconfont icon-fangdajing"></span>
+				<span>发现</span>
+			</li>
+			<li> 
+				<div class="camera">
+					<span class="icon3 iconfont icon-zhaoxiangji"></span>
+				</div>
+				
+			</li>
+			<li id="mine" class="active">
+				<span class="icon4 iconfont icon-wode"></span>
+				<span>我的</span>
+			</li>
+			<li id="exit">
+				<span class="icon5 iconfont icon-tuichu"></span>
+				<span>退出</span>
+			</li>
+		</ul>
+	</footer>
+
+	<script src="assets/js/seajs/sea-debug.js"></script>
+	<script>
+		seajs.config({
+			base:"modules/",
+			alias:{
+				"artTamplate":"lib/artTamplate.js",
+				"zepto":"lib/zepto.min.js",
+				"tap":"lib/zepto.tap.js",
+				"swiper":"lib/swiper-3.3.1.min.js",
+				"iscroll":"lib/iscroll-probe.js"
+				
+			}
+		})
+		seajs.use("mine")
+	</script>
+	<script id="mineLi" type="text/html">
+		{{each mineLi as value index}}
+			<img src="{{value.img}}" alt="">
+		{{/each}}
+	</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+body{
+	font-size: 16px;
+}
+header,footer,nav,section{
+	width: 100%;
+}
+header{
+	height: 0.88rem;
+	background: #0dc441;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+header p{
+	text-align: center;
+	font-size: .33rem;
+	color: #fff;
+	line-height: .88rem;
+}
+.search{
+	height: .66rem;
+	position: absolute;
+	top: .88rem;
+	left: 0;
+	width: 100%;
+	padding:0.07rem .1rem;
+	box-sizing: border-box;
+	border-bottom: 1px solid #cdcdcd;
+}
+.search input{
+	height: .49rem;
+	width: 5.18rem;
+	border-radius: 0.06rem;
+	border: 1px solid #aaa;
+	padding:0.13rem 0.14rem;
+	box-sizing: border-box;
+}
+.search button{
+	height: .47rem;
+	width:.91rem;
+	border:none;
+	background: #0dc441;
+	color: #fff;
+	font-size: 0.23rem;
+	border-radius: 0.06rem;
+}
+section{
+	position: absolute;
+	top: 1.54rem;
+	bottom: 0.87rem;
+	overflow: hidden;
+	background: #f1f1f1;
+}
+	.iscroll-wrap{
+		overflow: hidden;
+	}
+	.box{
+		margin-top:0.09rem;
+	}
+	.item{
+		padding: 0.22rem 0.24rem;
+		box-sizing: border-box;
+		height: 1.44rem;
+		border-bottom: 1px solid #e5e5e5;
+		background: #fff;
+	}
+	.portrait{
+		width: .95rem;
+		height: .95rem;
+		border: 0.01rem solid #d9d9d9;
+		border-radius: 50%;
+		display: inline-block;
+		float: left;
+		margin-right: 0.2rem;
+	}
+	.portrait img{
+		width: .95rem;
+		height: .95rem;
+	}
+	.item p{
+		display: inline-block;
+		float: left;
+		width: 3.2rem;
+	}
+	.name{
+		font-size: .28rem;
+
+	}
+	.describe{
+		line-height: .47rem;
+		color: #a9a9a9;
+		font-size: .23rem;
+	}
+	.atten{
+		display: inline-block;
+		width: .75rem;
+		height: .36rem;
+		background: #0dc441;
+		color: #fff;
+		border-radius: 0.06rem;
+		font-size: 0.23rem;
+		text-align: center;
+		line-height: .36rem;
+		float: right;
+		margin-top: -0.35rem;
+	}
+	.atten.active{
+		background: #e5e5e5;
+	}
+	.nothing{
+		display: none;
+		color:#6c6c6c;
+		text-align:center;
+	}
+footer{
+	height: 0.87rem;
+	border-top: 0.01rem solid #d9d9d9;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	z-index: 2;
+}
+	.foot-ul li{
+		float: left;
+		width: 1.28rem;
+		font-size: .23rem;
+		color: #d6d6d6;
+		text-align: center;
+		margin-top: .1rem;
+	}
+	.iconfont{
+		font-size: .33rem;
+		display: block;
+	}
+	.foot-ul li.active{
+		color: #0dc441;
+	}
+	.camera{
+		width: 1.06rem;
+		height: 1.06rem;
+		position: absolute;
+		bottom: 0;
+		left: 2.72rem;
+		border: 0.01rem solid #d9d9d9;
+		border-radius: 50%;
+		background: #fff;
+	}
+	.camera .iconfont{
+		font-size: 0.53rem;
+		margin-top: .24rem;
+	}

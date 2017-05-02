@@ -1,0 +1,38 @@
+body,p,img,ul,li,h1,h2,h3,h4,h5,h6{margin: 0;padding: 0;}
+a{text-decoration: none;color: black;}
+ul,li{list-style: none;}
+body{font-size: 12px;font-family: "微软雅黑";}
+input,a{outline: none;}
+header,nav,.main,footer,ul,.foot,.head{margin: 0 auto;}
+.clear{
+	clear: both;
+	overflow: hidden;
+}
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1490438993737'); /* IE9*/
+  src: url('iconfont.eot?t=1490438993737#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1490438993737') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1490438993737') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1490438993737#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-down:before { content: "\e603"; }
+
+.icon-wode:before { content: "\e66e"; }
+
+.icon-tuichu:before { content: "\e622"; }
+
+.icon-fangdajing:before { content: "\e61b"; }
+
+.icon-shouye-shouye:before { content: "\e60f"; }
+
+.icon-zhaoxiangji:before { content: "\e60c"; }

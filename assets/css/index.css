@@ -1,0 +1,237 @@
+body{
+	font-size: 16px;
+}
+header,footer,nav,section{
+	width: 100%;
+}
+header{
+	height: 0.88rem;
+	background: #0dc441;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+	.head{
+		display: inline-block; 
+		width: 1.16rem;
+		height: 0.48rem;
+		background: #3dd067;
+		color: #a3e9b7;
+		margin: 0;
+		padding: 0;
+		margin-top: 0.21rem;
+		text-align: center;
+		line-height: 0.48rem;
+		font-size: 0.23rem;
+	}
+	.head-left{
+		margin-left: 2rem;
+		border-top-left-radius: .25rem;
+		border-bottom-left-radius: .25rem;
+	}
+	.head-right{
+		border-top-right-radius: .25rem;
+		border-bottom-right-radius: .25rem;
+	}
+	.head.active{
+		background: #64d985;
+		color: #fff;
+	}
+nav{
+	height: 0.7rem;
+	background: rgba(255,255,255,0.8);
+	position: absolute;
+	top: 0.88rem;
+	left: 0;
+	z-index: 3;
+}
+	.nav-ul li{
+		float: left;
+		width: 2.13rem;
+		text-align: center;
+		font-size: .26rem;
+		color: #666;
+		line-height: 0.7rem;
+		border-bottom: 0.01rem solid #d9d9d9;
+	}
+	.nav-ul li.active{
+		color: #0dc441;
+		border-bottom:0.05rem solid #0dc441; 
+	}
+.onesec{
+	/*display: none;*/
+	position: absolute;
+	top: 0.88rem;
+	bottom: 0.87rem;
+	overflow: hidden;
+	/*padding-top: 0.75rem;*//*这里不应该用padding，应该将包裹层overflow，然后在滚动层加padding*/
+}
+	.iscroll-wrap{
+		overflow: hidden;
+	}
+	.d0,.d1,.d2{
+		padding-top: 0.75rem;
+	}
+	#page0,#page1,#page2,#page3,.d0,.d1,.d2,.d3{
+		float: left;
+	}
+	.item{
+		/*height: 3.74rem;*/
+		width: 3.12rem;
+		border: 0.01rem solid #e5e5e5;
+		margin-top: 0.08rem;
+		float: left;
+		font-size: 0.23rem;
+	}
+	.item1{
+		height: 3.74rem;
+	}
+	.item:nth-child(2n){
+		float: right;
+	}
+	.images{
+		/*border-bottom: 0.01rem solid #e5e5e5;*/
+		/*width:3.12rem;*/
+		/*height: 3.12rem;*/
+	}
+	.images img{
+		width:3.12rem;
+		border-bottom: 0.01rem solid #e5e5e5;
+		/*height: 3.12rem;*/
+	}
+	.font{
+		font-size: 0.23rem;
+		text-align: center;
+		line-height: 0.58rem;
+	}
+	.it{
+		text-align: left;
+	}
+	.im{
+		/*height: 2.11rem;*/
+		width:3.13rem;
+	}
+	.im img{
+		/*height: 2.11rem;*/
+		width:3.13rem;
+	}
+	.fo{
+		text-align: left;
+		display: block;
+		padding:.13rem .21rem;
+		box-sizing: border-box;
+		line-height: 0.39rem;
+	}
+	/*.attention{
+		display: none;
+	}*/
+.twosec{
+	display: none;
+	background: #f1f1f1;
+	position: absolute;
+	top: .88rem;
+	bottom: 0.87rem;
+	overflow: hidden;
+}
+	.content{
+		margin-bottom: .13rem;
+		background: #fff;
+	}
+	.title{
+		padding: 0.22rem 0.24rem;
+		box-sizing: border-box;
+		height: 1.44rem;
+	}
+	.portrait{
+		width: .95rem;
+		height: .95rem;
+		border: 0.01rem solid #d9d9d9;
+		border-radius: 50%;
+		display: inline-block;
+		float: left;
+		margin-right: 0.2rem;
+	}
+	.portrait img{
+		width: .95rem;
+		height: .95rem;
+	}
+	.title p{
+		display: inline-block;
+		float: left;
+		width: 3.2rem;
+	}
+	.name{
+		font-size: .28rem;
+
+	}
+	.describe{
+		line-height: .47rem;
+		color: #a9a9a9;
+		font-size: .23rem;
+	}
+	.agree{
+		float: right;
+		display: inline-block;
+		margin-top: -0.4rem;
+	}
+	.agree span{
+		color: #dddddd;
+		display: block;
+		font-size: .19rem;
+		float: left;
+	}
+	.agree .iconfont{
+		font-size: .23rem;
+		float: right;
+		margin-left: 0.1rem;
+	}
+	.photo{
+		height: 5.69rem; 
+	}
+	.photo img{
+		height: 5.69rem;
+	}
+	.p1{
+		display: block;
+		padding:.2rem 0.41rem;
+	}
+
+footer{
+	height: 0.87rem;
+	border-top: 0.01rem solid #d9d9d9;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	z-index: 2;
+}
+	.foot-ul li{
+		float: left;
+		width: 1.28rem;
+		font-size: .23rem;
+		color: #d6d6d6;
+		text-align: center;
+		margin-top: .1rem;
+	}
+	.iconfont{
+		font-size: .33rem;
+		display: block;
+	}
+	.foot-ul li.active{
+		color: #0dc441;
+	}
+	.camera{
+		width: 1.06rem;
+		height: 1.06rem;
+		position: absolute;
+		bottom: 0;
+		left: 2.72rem;
+		border: 0.01rem solid #d9d9d9;
+		border-radius: 50%;
+		background: #fff;
+	}
+	.camera .iconfont{
+		font-size: 0.53rem;
+		margin-top: .24rem;
+	}

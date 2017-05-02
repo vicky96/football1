@@ -1,0 +1,131 @@
+body{
+	font-size: 16px;
+}
+header,footer,nav,section{
+	width: 100%;
+}
+header{
+	height: 0.88rem;
+	background: #0dc441;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+header p{
+	text-align: center;
+	font-size: .33rem;
+	color: #fff;
+	line-height: .88rem;
+}
+section{
+	position: absolute;
+	top: 0.88rem;
+	bottom: 0.87rem;
+	overflow: hidden;
+}
+	.content{
+		float: left;
+	}
+	.title{
+		border-top:.11rem solid #f1f1f1;
+		padding: 0.22rem 0.24rem;
+		box-sizing: border-box;
+		height: 1.44rem;
+		z-index: 3;
+	}
+	.portrait{
+		width: .95rem;
+		height: .95rem;
+		border: 0.01rem solid #d9d9d9;
+		border-radius: 50%;
+		display: inline-block;
+		float: left;
+		margin-right: 0.2rem;
+	}
+	.portrait img{
+		width: .95rem;
+		height: .95rem;
+	}
+	.title p{
+		display: inline-block;
+		float: left;
+		width: 3.2rem;
+	}
+	.name{
+		font-size: .28rem;
+
+	}
+	.describe{
+		line-height: .47rem;
+		color: #a9a9a9;
+		font-size: .23rem;
+	}
+	.select{
+		height: .4rem;
+		margin-bottom: .05rem;
+		z-index: 3;
+	}
+	.select li{
+		float: left;
+		color: #999999;
+		width: 2.13rem;
+		text-align: center;
+		line-height: .4rem;
+		font-size: .24rem;
+		border-bottom:1px solid #e5e5e5;
+	}
+	.select li.active{
+		color: #0dc441;
+		border-bottom: 0.05rem solid #0dc441;
+	}
+	.photoes img{
+		width: 3.15rem;
+		display: inline-block;
+	}
+	.swiper-container{
+		position:absolute;
+		top: 1.9rem;
+		bottom:0;
+		width:100%;
+	}
+	.container1{
+		float: left;
+	}
+footer{
+	height: 0.87rem;
+	border-top: 0.01rem solid #d9d9d9;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	z-index: 2;
+}
+	.foot-ul li{
+		float: left;
+		width: 1.28rem;
+		font-size: .23rem;
+		color: #d6d6d6;
+		text-align: center;
+		margin-top: .1rem;
+	}
+	.iconfont{
+		font-size: .33rem;
+		display: block;
+	}
+	.foot-ul li.active{
+		color: #0dc441;
+	}
+	.camera{
+		width: 1.06rem;
+		height: 1.06rem;
+		position: absolute;
+		bottom: 0;
+		left: 2.72rem;
+		border: 0.01rem solid #d9d9d9;
+		border-radius: 50%;
+		background: #fff;
+	}
+	.camera .iconfont{
+		font-size: 0.53rem;
+		margin-top: .24rem;
+	}

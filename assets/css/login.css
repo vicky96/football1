@@ -1,0 +1,64 @@
+body{
+	font-size: 16px;
+}
+header,footer,nav,section{
+	width: 100%;
+}
+header{
+	height: 0.88rem;
+	background: #0dc441;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+header p{
+	text-align: center;
+	font-size: .33rem;
+	color: #fff;
+	line-height: .88rem;
+}
+section{
+	position: absolute;
+	top: 0.88rem;
+	bottom: 0.87rem;
+	overflow: hidden;
+	padding:0.31rem 0.3rem;
+	box-sizing: border-box;
+}
+	section input{
+		width: 5.8rem;
+		height:.68rem;
+		border: none;
+		border-bottom: 1px solid #7f7f7f;
+		margin-bottom: .55rem;
+	}
+	.register{
+		font-size: .22rem;
+		color: #999999;
+	}
+	.register a{
+		color: #a3e9b7;
+		text-decoration: underline; 
+	}
+	section button{
+		width: 5.8rem;
+		height:0.89rem;
+		background:#0dc441;
+		color: #fff;
+		border: none;
+		border-radius: 0.06rem;
+		margin-top: 0.54rem;
+	}
+	.sp1,.sp2{
+		display: inline-block;
+		position: absolute;
+		right: 0.3rem;
+		font-size: 0.12rem;
+	}
+	.sp1{
+		top: 0.5rem;
+	}
+	.sp2{
+		top:1.7rem;
+	}
+	

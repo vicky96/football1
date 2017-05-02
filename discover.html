@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title></title>
+	<link rel="stylesheet" href="assets/js/modules/lib/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="assets/css/common.css">
+	<link rel="stylesheet" href="assets/css/discover.css">
+	<script>
+		(function (doc, win) {
+			var docEl = doc.documentElement,
+
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;     
+				docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+			};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+
+		})(document, window);
+
+	</script>
+</head>
+<body>
+	<header>
+		<p>发现</p>
+	</header>
+	<div class="search">
+		<input id="search_input" type="text" placeholder="请输入昵称">
+		<button id="search_btn" type="button">搜索</button>
+	</div>
+	<section id="iscroll" class="iscroll-wrap">
+		<div class="box">
+			<div class="content">
+				<!-- <div class="item">
+					<div class="portrait">
+						<img src="assets/img/c1.png" alt="">
+					</div>
+					<p class="name">我叫小萌</p>
+					<p class="describe">我是小萌我怕谁！哈哈哈哈！</p>
+					<span class="atten">关注</span>
+				</div> -->
+			</div>
+		</div>
+	</section>
+	<footer>
+		<ul class="foot-ul">
+			<li id="footindex">
+				<span class="icon1 iconfont icon-shouye-shouye"></span>
+				<span>首页</span>
+			</li>
+			<li id="discover" class="active">
+				<span class="icon2 iconfont icon-fangdajing"></span>
+				<span>发现</span>
+			</li>
+			<li> 
+				<div class="camera">
+					<span class="icon3 iconfont icon-zhaoxiangji"></span>
+				</div>
+				
+			</li>
+			<li id="mine">
+				<span class="icon4 iconfont icon-wode"></span>
+				<span>我的</span>
+			</li>
+			<li id="exit">
+				<span class="icon5 iconfont icon-tuichu"></span>
+				<span>退出</span>
+			</li>
+		</ul>
+	</footer>
+
+	<script src="assets/js/seajs/sea-debug.js"></script>
+	<script>
+		seajs.config({
+			base:"modules/",
+			alias:{
+				"artTamplate":"lib/artTamplate.js",
+				"zepto":"lib/zepto.min.js",
+				"tap":"lib/zepto.tap.js",
+				"iscroll":"lib/iscroll-probe.js"
+				
+			}
+		})
+		seajs.use("discover")
+	</script>
+	<script id="myList" type="text/html">
+		{{each myList as value index}}
+			<div class="item">
+				<div class="portrait">
+					<img src="{{value.img}}" alt="">
+				</div>
+				<p class="name">{{value.name}}</p>
+				<p class="describe">{{value.des}}</p>
+				<span class="atten">关注</span>
+			</div>
+		{{/each}}
+	</script>
+</body>
+</html>
